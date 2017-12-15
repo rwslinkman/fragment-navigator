@@ -2,6 +2,7 @@ package nl.rwslinkman.fragmentnavigator;
 
 import android.app.FragmentManager;
 import android.app.FragmentTransaction;
+import android.support.annotation.LayoutRes;
 
 /**
  * @author Rick Slinkman
@@ -15,7 +16,7 @@ public class Navigator
     private final int mContainerId;
     private final FragmentManager mFragmentManager;
 
-    public Navigator(FragmentManager fragmentManager, int containerId) {
+    public Navigator(FragmentManager fragmentManager, @LayoutRes int containerId) {
         this.mContainerId = containerId;
         this.mFragmentManager = fragmentManager;
     }
