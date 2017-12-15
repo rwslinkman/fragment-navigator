@@ -6,7 +6,6 @@ import android.app.FragmentTransaction;
 /**
  * @author Rick Slinkman
  */
-
 public class Navigator
 {
     public interface NavigationListener {
