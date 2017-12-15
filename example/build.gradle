@@ -34,9 +34,6 @@ dependencies {
     if(findProject(':navigator') != null) {
         implementation project(":navigator")
     }
-    else {
-        implementation project(":fragment-navigator:navigator")
-    }
 
     testImplementation 'junit:junit:4.12'
 }
