@@ -3,6 +3,7 @@ package nl.rwslinkman.fragmentnavigator;
 import android.app.FragmentManager;
 import android.app.FragmentTransaction;
 import android.support.annotation.LayoutRes;
+import android.support.annotation.VisibleForTesting;
 
 /**
  * @author Rick Slinkman
@@ -13,8 +14,13 @@ public class Navigator
         void onNavigate();
     }
     private NavigationListener mListener;
-    private final int mContainerId;
-    private final FragmentManager mFragmentManager;
+    private int mContainerId;
+    private FragmentManager mFragmentManager;
+
+    @VisibleForTesting
+    Navigator() {
+        // NOP
+    }
 
     public Navigator(FragmentManager fragmentManager, @LayoutRes int containerId) {
         this.mContainerId = containerId;
