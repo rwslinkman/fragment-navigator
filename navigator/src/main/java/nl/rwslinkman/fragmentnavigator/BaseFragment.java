@@ -46,12 +46,12 @@ abstract public class BaseFragment<A extends NavigatorActivity> extends Fragment
     }
 
     @VisibleForTesting
-    void setNavigator(Navigator navigator) {
+    public void setNavigator(Navigator navigator) {
         this.mNavigator = navigator;
     }
 
     @VisibleForTesting
-    void setFragmentActivity(A activity) {
+    public void setFragmentActivity(A activity) {
         this.mActivity = activity;
     }
 }
