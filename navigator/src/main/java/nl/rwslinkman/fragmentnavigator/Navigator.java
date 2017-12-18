@@ -2,6 +2,7 @@ package nl.rwslinkman.fragmentnavigator;
 
 import android.app.FragmentManager;
 import android.app.FragmentTransaction;
+import android.support.annotation.IdRes;
 import android.support.annotation.LayoutRes;
 import android.support.annotation.VisibleForTesting;
 
@@ -22,7 +23,11 @@ public class Navigator
         // NOP
     }
 
-    public Navigator(FragmentManager fragmentManager, @LayoutRes int containerId) {
+    /**
+     * @param fragmentManager FragmentManager Android Fragment manager
+     * @param containerId int Reference to the FrameLayout to use the navigator with
+     */
+    public Navigator(FragmentManager fragmentManager, @IdRes int containerId) {
         this.mContainerId = containerId;
         this.mFragmentManager = fragmentManager;
     }
