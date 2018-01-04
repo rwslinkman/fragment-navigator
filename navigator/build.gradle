@@ -55,3 +55,14 @@ dependencies {
     testImplementation 'org.robolectric:robolectric:3.4.2'
     testImplementation 'org.robolectric:shadows-support-v4:3.3.2'
 }
+
+bintray {
+    user = 'bintray_user'
+    key = 'bintray_api_key'
+    pkg {
+        repo = 'generic'
+        name = 'gradle-project'
+        licenses = ['Apache-2.0']
+        vcsUrl = 'https://github.com/bintray/gradle-bintray-plugin.git'
+    }
+}
