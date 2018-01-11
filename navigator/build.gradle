@@ -1,3 +1,7 @@
+plugins {
+    id "com.jfrog.bintray" version "1.7.3"
+}
+
 apply plugin: 'com.android.library'
 
 android {
@@ -56,13 +60,20 @@ dependencies {
     testImplementation 'org.robolectric:shadows-support-v4:3.3.2'
 }
 
+//apply plugin: 'java'
 bintray {
-    user = 'bintray_user'
-    key = 'bintray_api_key'
+    user = System.getenv('BINTRAY_USER')
+    key = System.getenv('BINTRAY_KEY')
+    configurations = ['archives']
     pkg {
-        repo = 'generic'
-        name = 'gradle-project'
+        repo = 'maven'
+        name = 'fragment-navigator'
         licenses = ['Apache-2.0']
-        vcsUrl = 'https://github.com/bintray/gradle-bintray-plugin.git'
+        vcsUrl = 'https://github.com/rwslinkman/fragment-navigator.git'
+        version {
+            name = '1.0'
+            desc = 'Simple Android navigation library to navigate between fragments in one Activity'
+            released = new Date()
+        }
     }
 }
