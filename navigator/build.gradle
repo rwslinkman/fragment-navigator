@@ -1,12 +1,36 @@
 apply plugin: 'com.android.library'
 
+ext {
+    bintrayRepo = 'maven'
+    bintrayName = 'fragment-navigator'
+
+    publishedGroupId = 'nl.rwslinkman.fragmentnavigator'
+    libraryName = 'fragment-navigator'
+    artifact = 'fragment-navigator'
+
+    libraryDescription = 'Simple Android navigation library to navigate between fragments in one Activity'
+
+    siteUrl = 'https://github.com/rwslinkman/fragment-navigator'
+    gitUrl = 'https://github.com/rwslinkman/fragment-navigator.git'
+
+    libraryVersion = '1.2'
+
+    developerId = 'rwslinkman'
+    developerName = 'Rick Slinkman'
+    developerEmail = 'rw.slinkman@gmail.com'
+
+    licenseName = 'The Apache Software License, Version 2.0'
+    licenseUrl = 'http://www.apache.org/licenses/LICENSE-2.0.txt'
+    allLicenses = ["Apache-2.0"]
+}
+
 android {
     compileSdkVersion 27
     defaultConfig {
         minSdkVersion 14
         targetSdkVersion 27
         versionCode 1
-        versionName "1.0"
+        versionName "1.2"
         archivesBaseName = "fragment-navigator-$versionName"
         testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
 
@@ -55,3 +79,70 @@ dependencies {
     testImplementation 'org.robolectric:robolectric:3.4.2'
     testImplementation 'org.robolectric:shadows-support-v4:3.3.2'
 }
+
+
+repositories {
+    maven { url 'https://github.com/rwslinkman/fragment-navigator.git' }
+}
+
+// Place it at the end of the file
+apply from: 'https://raw.githubusercontent.com/nuuneoi/JCenter/master/installv1.gradle'
+apply from: 'https://raw.githubusercontent.com/nuuneoi/JCenter/master/bintrayv1.gradle'
+
+//
+//bintray {
+//    user = System.getenv('BINTRAY_USER')
+//    key = System.getenv('BINTRAY_KEY')
+//    pkg {
+//        repo = 'maven'
+//        name = 'fragment-navigator'
+//        licenses = ['Apache-2.0']
+//        vcsUrl = 'https://github.com/rwslinkman/fragment-navigator.git'
+//        version {
+//            name = '1.2'
+//            desc = 'Simple Android navigation library to navigate between fragments in one Activity'
+//            released = new Date()
+//        }
+//    }
+//}
+//
+//apply plugin: 'maven-publish'
+//
+//publishing {
+//    publications {
+//        FragmentNavigator(MavenPublication) {
+//            groupId 'nl.rwslinkman.fragmentnavigatore'
+//            artifactId 'gradle-project'
+//            version '1.2'
+//            artifact sourcesJar
+//            pom.withXml {
+//                def root = asNode()
+//                root.appendNode('description', 'Simple Android navigation library to navigate between fragments in one Activity')
+//                root.appendNode('name', 'fragment-navigator')
+//                root.children().last() + pomConfig
+//                // Iterate over the compile dependencies (we don't want the test ones), adding a <dependency> node for each
+//                configurations.compile.allDependencies.each {
+//                    def dependencyNode = dependenciesNode.appendNode('dependency')
+//                    dependencyNode.appendNode('groupId', it.group)
+//                    dependencyNode.appendNode('artifactId', it.name)
+//                    dependencyNode.appendNode('version', it.version)
+//                }
+//            }
+//        }
+//    }
+//}
+//
+//publishing {
+//    repositories {
+//        maven {
+//            // change to point to your repo, e.g. http://my.org/repo
+//            url "https://github.com/rwslinkman/fragment-navigator.gi"
+//        }
+//    }
+//}
+//
+//model {
+//    tasks.generatePomFileForFragmentNavigatorPublication {
+//        destination = file("$buildDir/generated-pom.xml")
+//    }
+//}
