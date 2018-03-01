@@ -13,7 +13,7 @@ ext {
     siteUrl = 'https://github.com/rwslinkman/fragment-navigator'
     gitUrl = 'https://github.com/rwslinkman/fragment-navigator.git'
 
-    libraryVersion = '1.3'
+    libraryVersion = '1.4'
 
     developerId = 'rwslinkman'
     developerName = 'Rick Slinkman'
@@ -31,7 +31,7 @@ android {
         minSdkVersion 14
         targetSdkVersion 27
         versionCode 1
-        versionName "1.3"
+        versionName "1.4"
         archivesBaseName = "fragment-navigator"
         testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
 
@@ -89,61 +89,3 @@ repositories {
 // Place it at the end of the file
 apply from: 'https://raw.githubusercontent.com/nuuneoi/JCenter/master/installv1.gradle'
 apply from: 'https://raw.githubusercontent.com/nuuneoi/JCenter/master/bintrayv1.gradle'
-
-//
-//bintray {
-//    user = System.getenv('BINTRAY_USER')
-//    key = System.getenv('BINTRAY_KEY')
-//    pkg {
-//        repo = 'maven'
-//        name = 'fragment-navigator'
-//        licenses = ['Apache-2.0']
-//        vcsUrl = 'https://github.com/rwslinkman/fragment-navigator.git'
-//        version {
-//            name = '1.2'
-//            desc = 'Simple Android navigation library to navigate between fragments in one Activity'
-//            released = new Date()
-//        }
-//    }
-//}
-//
-//apply plugin: 'maven-publish'
-//
-//publishing {
-//    publications {
-//        FragmentNavigator(MavenPublication) {
-//            groupId 'nl.rwslinkman.fragmentnavigatore'
-//            artifactId 'gradle-project'
-//            version '1.2'
-//            artifact sourcesJar
-//            pom.withXml {
-//                def root = asNode()
-//                root.appendNode('description', 'Simple Android navigation library to navigate between fragments in one Activity')
-//                root.appendNode('name', 'fragment-navigator')
-//                root.children().last() + pomConfig
-//                // Iterate over the compile dependencies (we don't want the test ones), adding a <dependency> node for each
-//                configurations.compile.allDependencies.each {
-//                    def dependencyNode = dependenciesNode.appendNode('dependency')
-//                    dependencyNode.appendNode('groupId', it.group)
-//                    dependencyNode.appendNode('artifactId', it.name)
-//                    dependencyNode.appendNode('version', it.version)
-//                }
-//            }
-//        }
-//    }
-//}
-//
-//publishing {
-//    repositories {
-//        maven {
-//            // change to point to your repo, e.g. http://my.org/repo
-//            url "https://github.com/rwslinkman/fragment-navigator.gi"
-//        }
-//    }
-//}
-//
-//model {
-//    tasks.generatePomFileForFragmentNavigatorPublication {
-//        destination = file("$buildDir/generated-pom.xml")
-//    }
-//}
