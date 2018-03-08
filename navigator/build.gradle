@@ -13,7 +13,7 @@ ext {
     siteUrl = 'https://github.com/rwslinkman/fragment-navigator'
     gitUrl = 'https://github.com/rwslinkman/fragment-navigator.git'
 
-    libraryVersion = '1.4'
+    libraryVersion = '1.5'
 
     developerId = 'rwslinkman'
     developerName = 'Rick Slinkman'
@@ -30,8 +30,8 @@ android {
     defaultConfig {
         minSdkVersion 14
         targetSdkVersion 27
-        versionCode 1
-        versionName "1.4"
+        versionCode 2
+        versionName "1.5"
         archivesBaseName = "fragment-navigator"
         testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
 
