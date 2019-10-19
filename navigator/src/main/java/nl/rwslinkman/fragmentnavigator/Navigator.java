@@ -9,6 +9,7 @@ import androidx.annotation.VisibleForTesting;
 /**
  * @author Rick Slinkman
  */
+@Deprecated
 public class Navigator
 {
     public interface NavigationListener {

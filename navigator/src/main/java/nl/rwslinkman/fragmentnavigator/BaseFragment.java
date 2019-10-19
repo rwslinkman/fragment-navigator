@@ -13,7 +13,7 @@ import androidx.annotation.VisibleForTesting;
 /**
  * @author Rick Slinkman
  */
-
+@Deprecated
 abstract public class BaseFragment<A extends NavigatorActivity> extends Fragment {
 
     private A mActivity;
