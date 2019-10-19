@@ -1,7 +1,4 @@
-package nl.rwslinkman.fragmentnavigator;
-
-import android.app.FragmentManager;
-import android.app.FragmentTransaction;
+package nl.rwslinkman.fragmentnavigator.jetpack;
 
 import org.junit.Before;
 import org.junit.Test;
@@ -12,7 +9,8 @@ import org.mockito.Mockito;
 import org.mockito.MockitoAnnotations;
 import org.robolectric.RobolectricTestRunner;
 
-
+import androidx.fragment.app.FragmentManager;
+import androidx.fragment.app.FragmentTransaction;
 import nl.rwslinkman.fragmentnavigator.util.RobolectricTestCase;
 
 import static org.junit.Assert.assertFalse;

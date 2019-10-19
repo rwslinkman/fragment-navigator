@@ -10,15 +10,15 @@ import org.mockito.InjectMocks;
 import org.mockito.Mock;
 import org.mockito.Mockito;
 import org.mockito.MockitoAnnotations;
-import org.powermock.modules.junit4.PowerMockRunner;
+import org.robolectric.RobolectricTestRunner;
 
 import nl.rwslinkman.fragmentnavigator.util.RobolectricTestCase;
 
 import static org.junit.Assert.assertFalse;
 import static org.junit.Assert.assertTrue;
 
-@RunWith(PowerMockRunner.class)
-public class NavigatorTest extends RobolectricTestCase {
+@RunWith(RobolectricTestRunner.class)
+public class NavigatorTest {
 
     @InjectMocks
     private Navigator navigator;
