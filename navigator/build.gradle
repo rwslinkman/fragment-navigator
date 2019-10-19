@@ -1,5 +1,7 @@
 apply plugin: 'com.android.library'
 
+def libVersion = "1.5"
+
 ext {
     bintrayRepo = 'maven'
     bintrayName = 'fragment-navigator'
@@ -13,7 +15,7 @@ ext {
     siteUrl = 'https://github.com/rwslinkman/fragment-navigator'
     gitUrl = 'https://github.com/rwslinkman/fragment-navigator.git'
 
-    libraryVersion = '1.5'
+    libraryVersion = "$libVersion"
 
     developerId = 'rwslinkman'
     developerName = 'Rick Slinkman'
@@ -31,7 +33,7 @@ android {
         minSdkVersion 14
         targetSdkVersion 28
         versionCode 2
-        versionName "1.5"
+        versionName "$libVersion"
         archivesBaseName = "fragment-navigator"
         testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
 
@@ -71,7 +73,6 @@ cobertura {
 
 dependencies {
     implementation fileTree(dir: 'libs', include: ['*.jar'])
-    implementation 'com.android.support:appcompat-v7:27.1.1'
     implementation 'androidx.fragment:fragment:1.1.0'
 
     testImplementation "junit:junit:4.12"

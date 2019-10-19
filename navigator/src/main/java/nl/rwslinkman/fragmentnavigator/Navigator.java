@@ -2,9 +2,9 @@ package nl.rwslinkman.fragmentnavigator;
 
 import android.app.FragmentManager;
 import android.app.FragmentTransaction;
-import android.support.annotation.IdRes;
-import android.support.annotation.LayoutRes;
-import android.support.annotation.VisibleForTesting;
+
+import androidx.annotation.IdRes;
+import androidx.annotation.VisibleForTesting;
 
 /**
  * @author Rick Slinkman

@@ -11,7 +11,6 @@ import org.robolectric.RobolectricTestRunner;
 
 import androidx.fragment.app.FragmentManager;
 import androidx.fragment.app.FragmentTransaction;
-import nl.rwslinkman.fragmentnavigator.util.RobolectricTestCase;
 
 import static org.junit.Assert.assertFalse;
 import static org.junit.Assert.assertTrue;

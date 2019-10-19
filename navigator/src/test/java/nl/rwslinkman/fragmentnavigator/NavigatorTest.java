@@ -12,9 +12,6 @@ import org.mockito.Mockito;
 import org.mockito.MockitoAnnotations;
 import org.robolectric.RobolectricTestRunner;
 
-
-import nl.rwslinkman.fragmentnavigator.util.RobolectricTestCase;
-
 import static org.junit.Assert.assertFalse;
 import static org.junit.Assert.assertTrue;
 

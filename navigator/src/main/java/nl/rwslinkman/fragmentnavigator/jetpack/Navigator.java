@@ -1,8 +1,7 @@
 package nl.rwslinkman.fragmentnavigator.jetpack;
 
-import android.support.annotation.IdRes;
-import android.support.annotation.VisibleForTesting;
-
+import androidx.annotation.IdRes;
+import androidx.annotation.VisibleForTesting;
 import androidx.fragment.app.FragmentManager;
 import androidx.fragment.app.FragmentTransaction;
 
